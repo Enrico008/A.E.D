@@ -68,11 +68,15 @@ public class ArvoreAVL {
     }
 
     public static void main(String[] args) {
-        Node raiz = null;
-        for (String s : new String[]{"A", "B", "C", "D", "E", "F"})
-            raiz = ins(raiz, s);
+         ArvoreAVL arvore = new ArvoreAVL();
 
-        System.out.println("Total: " + contar(raiz));
-        mostrar(raiz);
+    int[] chaves = {10, 20, 30, 40, 50, 25};
+
+    for (int chave : chaves) {
+        arvore.raiz = arvore.inserir(arvore.raiz, chave);
+        }
+
+    System.out.println("percurso em ordem da arvore AVL:");
+    arvore.percursoEmOrdem(arvore.raiz);
     }
 }
